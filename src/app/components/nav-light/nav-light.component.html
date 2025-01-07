@@ -1,0 +1,44 @@
+<nav class="navbar" id="navbar" [ngClass]="scrolled ? 'is-sticky' : '' ">
+    <div class="container relative flex flex-wrap items-center justify-between">
+        <a class="navbar-brand md:me-8" href="https://preparacaopolicial.com.br">
+            <span class="inline-block dark:hidden">
+                <img src="assets/images/logopreparacao_light.png" class="l-dark" width="200" height="200" alt="">
+                <img src="assets/images/logopreparacao.png" class="l-light" width="200" height="200" alt="">
+            </span>
+            <img src="assets/images/logopreparacao.png" class="hidden dark:inline-block" width="200" height="200" alt="">
+        </a>
+
+        <!-- <div class="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
+            <ul class="list-none menu-social mb-0">
+                <li class="inline">
+                    <a href="" class="h-8 px-4 text-[12px] tracking-wider inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white uppercase">Login</a>
+                </li>
+            </ul>
+            <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-2 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false" (click)="toggleManu()">
+                <span class="sr-only">Navigation Menu</span>
+                <i class="mdi mdi-menu text-[24px]"></i>
+            </button>
+        </div> -->
+
+        <!-- Navbar Manu -->
+        <div class="navigation lg_992:order-1 lg_992:flex ms-auto" [ngClass]="manu=== true ? 'block' : 'hidden' " id="menu-collapse">
+            <ul class="navbar-nav nav-light sidebar-nav" id="navbar-navlist">
+                <li class="nav-item ms-0 home active">
+                    <a class="nav-link hover:text-sky-500" href="#home">Pagina Inicial</a>
+                </li>
+                <li class="nav-item ms-0 about">
+                    <a class="nav-link hover:text-sky-500" href="#about">Sobre nós</a>
+                </li>
+                <li class="nav-item ms-0 services">
+                    <a class="nav-link hover:text-sky-500" href="#services">Serviços</a>
+                </li>
+                <li class="nav-item ms-0 pricing">
+                    <a class="nav-link hover:text-sky-500" href="#pricing">Preços</a>
+                </li>
+                <li class="nav-item ms-0 contact">
+                    <a class="nav-link hover:text-sky-500" href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

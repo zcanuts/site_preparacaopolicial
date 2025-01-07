@@ -1,0 +1,67 @@
+<app-nav-light/>
+<section class="swiper-slider-hero relative block h-screen" id="home">
+    <div class="swiper-container absolute end-0 top-0 w-full h-full">
+        <swiper-container class="swiper-wrapper" appSwiper #swiper [config]="swiperConfig" thumbs-swiper=".mySwiper2" (slidechange)="slideChange($event)" class="h-screen">
+            <swiper-slide>
+                <div class="swiper-slide flex items-center overflow-hidden">
+                    <div class="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center bg-[url('/assets/images/bg/1.jpg')]">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                        <div class="container relative">
+                            <div class="grid grid-cols-1">
+                                <div class="">
+                                    <h1 class="font-bold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl capitalize text-white mb-5">Connect with <br> customers smartly</h1>
+                                    <p class="text-white/70 text-lg max-w-xl">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+
+                                    <div class="mt-6">
+                                        <a href="" class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white">See More</a>
+                                    </div>
+                                </div>
+                            </div><!--end grid-->
+                        </div><!--end container-->
+                    </div><!-- end slide-inner -->
+                </div> <!-- end swiper-slide -->
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide flex items-center overflow-hidden">
+                    <div class="slide-inner absolute end-0 top-0 w-full h-full slide-bg-image flex items-center bg-center bg-[url('/assets/images/bg/2.jpg')]" data-background="assets/images/bg/2.jpg">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                        <div class="container relative">
+                            <div class="grid grid-cols-1">
+                                <div class="">
+                                    <h1 class="font-bold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl capitalize text-white mb-5">Get all the <br> inspirations for your business</h1>
+                                    <p class="text-white/70 text-lg max-w-xl">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+
+                                    <div class="mt-6">
+                                        <a href="" class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white">See More</a>
+                                    </div>
+                                </div>
+                            </div><!--end grid-->
+                        </div><!--end container-->
+                    </div><!-- end slide-inner -->
+                </div> <!-- end swiper-slide -->
+            </swiper-slide>
+        </swiper-container>
+        <!-- end swiper-wrapper -->
+
+        <!-- swipper controls -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next bg-transparent w-[35px] h-[35px] leading-[35px] -mt-[30px] bg-none border border-solid border-white/50 text-white hover:bg-sky-500 rounded-full text-center"></div>
+        <div class="swiper-button-prev bg-transparent w-[35px] h-[35px] leading-[35px] -mt-[30px] bg-none border border-solid border-white/50 text-white hover:bg-sky-500 rounded-full text-center"></div>
+    </div><!--end container-->
+</section>
+
+<app-about/>
+
+<app-services/>
+
+<app-agency-tab/>
+
+<app-cta/>
+
+<app-client/>
+
+<app-pricing/>
+
+<app-blogs/>
+
+<app-get-in-touch/>
