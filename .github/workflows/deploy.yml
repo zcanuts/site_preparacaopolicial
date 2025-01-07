@@ -24,8 +24,8 @@ jobs:
         with:
           host: "147.79.81.28"
           username: "userdeploy"
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          source: "dist/site_preparacao/browser/*"
+          key: ${{ secrets.SSH_PRIVATE_SITE }}
+          source: "/dist/site_preparacao/browser/*"
           target: /var/www/site_preparacao
 
       # Passo 4: Ajustar permissões na VPS
@@ -34,7 +34,7 @@ jobs:
         with:
           host: "147.79.81.28"
           username: "userdeploy"
-          password: ${{ secrets.DEPLOY_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_SITE }}
           script: |
-            chown -R www-data:www-data /var/www/site_preparacao
-            systemctl restart nginx
+            sudo chown -R userdeploy:userdeploy /var/www/site_preparacao
+            sudo systemctl restart nginx
