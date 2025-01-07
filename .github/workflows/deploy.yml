@@ -1,4 +1,4 @@
-name: "Deploy Site para VPS"
+name: "Deploy Sites para VPS"
 on:
   push:
     branches:
@@ -19,23 +19,43 @@ jobs:
           npm install --legacy-peer-deps
           npx ng build --configuration production
 
-      # Passo 4: Copiar arquivos para VPS
+      # Passo 3: Configurar SSH com senha
+      - name: "Configurando o SSH"
+        env:
+          SSH_PRIVATE_SITE: ${{ secrets.SSH_PRIVATE_SITE }}
+          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+        run: |
+          # Inicia o agente SSH
+          eval "$(ssh-agent -s)"
+          # Configura o SSH_ASKPASS para fornecer a senha
+          echo "echo $SSH_PASSPHRASE" > ~/.ssh_askpass && chmod +x ~/.ssh_askpass
+          # Adiciona a chave privada ao agente SSH
+          echo "$SSH_PRIVATE_SITE" | tr -d '\r' | DISPLAY=:0 SSH_ASKPASS=~/.ssh_askpass ssh-add -
+
+      # Passo 4: Testar conexão SSH
+      - name: "Testar Conexão SSH"
+        run: |
+          ssh -o StrictHostKeyChecking=no userdeploy@147.79.81.28 "echo 'Conexão SSH bem-sucedida!'"
+
+      # Passo 5: Copiar arquivos para a VPS
       - name: "Copiar arquivos para VPS"
         uses: appleboy/scp-action@v0.1.7
         with:
           host: "147.79.81.28"
           username: "userdeploy"
           key: ${{ secrets.SSH_PRIVATE_SITE }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "dist/site_preparacao/browser/*"
-          target: /var/www/site_preparacao
+          target: "/var/www/site_preparacao"
 
-      # Passo 5: Ajustar permissões na VPS
+      # Passo 6: Ajustar permissões na VPS
       - name: "Ajustando permissões na VPS"
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: "147.79.81.28"
           username: "userdeploy"
           key: ${{ secrets.SSH_PRIVATE_SITE }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             sudo chown -R userdeploy:userdeploy /var/www/site_preparacao
             sudo systemctl restart nginx
