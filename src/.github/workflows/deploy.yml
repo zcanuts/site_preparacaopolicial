@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build_deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       # Passo 1: Baixar o código
