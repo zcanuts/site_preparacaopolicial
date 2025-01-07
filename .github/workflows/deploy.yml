@@ -23,7 +23,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: "147.79.81.28"
-          username: "root"
+          username: "userdeploy"
           key: ${{ secrets.SSH_PRIVATE_SITE }}
           source: "dist/site_preparacao/browser/*"
           target: /var/www/site_preparacao
