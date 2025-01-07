@@ -18,13 +18,6 @@ jobs:
           npm install --legacy-peer-deps
           npx ng build --configuration production
 
-      # Passo 3: Configurar SSH para a chave com passphrase (se necessário)
-      - name: "Adicionar chave SSH ao agente"
-        run: |
-          eval $(ssh-agent -s)  # Inicia o ssh-agent
-          echo "${{ secrets.SSH_PRIVATE_SITE }}" | ssh-add - <<< "${{ secrets.SSH_PASSPHRASE }}"  # Adiciona a chave e a passphrase
-          ssh-add -l  # Verifica se a chave foi adicionada corretamente
-
       # Passo 4: Copiar arquivos para a VPS
       - name: "Copiar arquivos para VPS"
         uses: appleboy/scp-action@v0.1.7
