@@ -1,4 +1,4 @@
-name: "Deploy Site para VPS"
+name: "Deploy Sites para VPS"
 on:
   push:
     branches:
@@ -21,9 +21,9 @@ jobs:
       # Passo 3: Configurar SSH para a chave com passphrase (se necessário)
       - name: "Adicionar chave SSH ao agente"
         run: |
-          eval $(ssh-agent -s)
-          echo "${{ secrets.SSH_PRIVATE_SITE }}" | ssh-add - <<< "${{ secrets.SSH_PASSPHRASE }}"
-          ssh-add -l
+          eval $(ssh-agent -s)  # Inicia o ssh-agent
+          echo "${{ secrets.SSH_PRIVATE_SITE }}" | ssh-add - <<< "${{ secrets.SSH_PASSPHRASE }}"  # Adiciona a chave e a passphrase
+          ssh-add -l  # Verifica se a chave foi adicionada corretamente
 
       # Passo 4: Copiar arquivos para a VPS
       - name: "Copiar arquivos para VPS"
