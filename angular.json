@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "upcover": {
+    "site_preparacao": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/upcover",
+            "outputPath": "dist/site_preparacao",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "upcover:build:production"
+              "buildTarget": "site_preparacao:build:production"
             },
             "development": {
-              "buildTarget": "upcover:build:development"
+              "buildTarget": "site_preparacao:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "upcover:build"
+            "buildTarget": "site_preparacao:build"
           }
         },
         "test": {

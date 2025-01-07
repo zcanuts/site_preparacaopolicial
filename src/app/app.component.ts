@@ -12,6 +12,6 @@ import { SwitcherComponent } from './components/switcher/switcher.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'upcover';
-  
+  title = 'site_preparacao';
+
 }

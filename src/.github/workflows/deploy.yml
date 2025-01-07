@@ -1,0 +1,40 @@
+name: "Deploy Site para VPS"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo 1: Baixar o código
+      - name: "Baixar o código"
+        uses: actions/checkout@v4
+
+      # Passo 2:  build localmente
+      - name: "Build Local"
+        run: |
+          npx ng build --configuration production
+
+      # Passo 3: Copiar arquivos para a VPS
+      - name: "Copiar arquivos para VPS"
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: "147.79.81.28"
+          username: "root"
+          key: ${{ secrets.SSH_PRIVATE_SITE }}
+          source: "dist/site_preparacao/*"
+          target: /var/www/site_preparacao
+
+      # Passo 4: Ajustar permissões na VPS
+      - name: "Ajustar permissões na VPS"
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: "147.79.81.28"
+          username: "root"
+          key: ${{ secrets.SSH_PRIVATE_SITE }}
+          port: ${{ secrets.PORT }}
+          script: |
+            chown -R www-data:www-data /var/www/site_preparacao
+            systemctl restart nginx
