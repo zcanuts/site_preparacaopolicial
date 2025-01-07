@@ -24,7 +24,7 @@ jobs:
           host: "147.79.81.28"
           username: "root"
           key: ${{ secrets.SSH_PRIVATE_SITE }}
-          source: "dist/site_preparacao/*"
+          source: "dist/site_preparacao/browser/*"
           target: /var/www/site_preparacao
 
       # Passo 4: Ajustar permissões na VPS
