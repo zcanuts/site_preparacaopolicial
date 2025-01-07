@@ -24,7 +24,7 @@ jobs:
         with:
           host: "147.79.81.28"
           username: "userdeploy"
-          key: ${{ secrets.SSH_PRIVATE_SITE }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           source: "dist/site_preparacao/browser/*"
           target: /var/www/site_preparacao
 
@@ -33,9 +33,8 @@ jobs:
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: "147.79.81.28"
-          username: "root"
-          key: ${{ secrets.SSH_PRIVATE_SITE }}
-          port: ${{ secrets.PORT }}
+          username: "userdeploy"
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           script: |
             chown -R www-data:www-data /var/www/site_preparacao
             systemctl restart nginx
