@@ -19,14 +19,6 @@ jobs:
           npm install --legacy-peer-deps
           npx ng build --configuration production
 
-      # Passo 3: Configurar chave SSH
-      - name: "Configurar chave SSH"
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_SITE }}" > ~/.ssh/key_vps
-          chmod 600 ~/.ssh/key_vps
-          ssh-keyscan -H 147.79.81.28 >> ~/.ssh/known_hosts
-
       # Passo 4: Copiar arquivos para VPS
       - name: "Copiar arquivos para VPS"
         uses: appleboy/scp-action@v0.1.7
