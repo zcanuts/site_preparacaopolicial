@@ -1,8 +1,9 @@
-name: "Deploy Site para VPS"
+name: "Deploy Sites para VPS"
 on:
   push:
     branches:
       - main
+
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
@@ -18,7 +19,15 @@ jobs:
           npm install --legacy-peer-deps
           npx ng build --configuration production
 
-      # Passo 4: Copiar arquivos para a VPS
+      # Passo 3: Configurar a chave SSH
+      - name: "Configurar chave SSH"
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_SITE }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 147.79.81.28 >> ~/.ssh/known_hosts
+
+      # Passo 4: Copiar arquivos para VPS
       - name: "Copiar arquivos para VPS"
         uses: appleboy/scp-action@v0.1.7
         with:
