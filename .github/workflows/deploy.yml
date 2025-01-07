@@ -12,13 +12,20 @@ jobs:
       - name: "Baixar o código"
         uses: actions/checkout@v4
 
-      # Passo 2:  build localmente
+      # Passo 2: Build localmente
       - name: "Build Local"
         run: |
           npm install --legacy-peer-deps
           npx ng build --configuration production
 
-      # Passo 3: Copiar arquivos para a VPS
+      # Passo 3: Configurar SSH para a chave com passphrase (se necessário)
+      - name: "Adicionar chave SSH ao agente"
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PRIVATE_SITE }}" | ssh-add - <<< "${{ secrets.SSH_PASSPHRASE }}"
+          ssh-add -l
+
+      # Passo 4: Copiar arquivos para a VPS
       - name: "Copiar arquivos para VPS"
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -28,7 +35,7 @@ jobs:
           source: "dist/site_preparacao/browser/*"
           target: /var/www/site_preparacao
 
-      # Passo 4: Ajustar permissões na VPS
+      # Passo 5: Ajustar permissões na VPS
       - name: "Ajustando permissões na VPS"
         uses: appleboy/ssh-action@v1.2.0
         with:
