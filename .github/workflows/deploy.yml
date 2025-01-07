@@ -29,7 +29,7 @@ jobs:
           target: /var/www/site_preparacao
 
       # Passo 4: Ajustar permissões na VPS
-      - name: "Ajustar permissões na VPS"
+      - name: "Ajustando permissões na VPS"
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: "147.79.81.28"
