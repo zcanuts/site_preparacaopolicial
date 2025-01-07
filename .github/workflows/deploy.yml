@@ -15,6 +15,7 @@ jobs:
       # Passo 2:  build localmente
       - name: "Build Local"
         run: |
+          npm install --legacy-peer-deps --no-progress -a
           npx ng build --configuration production
 
       # Passo 3: Copiar arquivos para a VPS
