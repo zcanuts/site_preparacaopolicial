@@ -1,0 +1,27 @@
+.chat-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.chat-header {
+  text-align: center;
+}
+
+.chat-messages {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.user-message {
+  text-align: right;
+}
+
+.bot-message {
+  text-align: left;
+}
+
+.message {
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
+}

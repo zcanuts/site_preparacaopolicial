@@ -1,20 +1,81 @@
-<section class="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800" id="contact">
-    <div class="container relative">
-        <div class="grid grid-cols-1 pb-6 text-center">
-            <h3 class="font-semibold text-2xl leading-normal mb-4">Get in touch </h3>
+<section
+  class="relative lg:py-24 py-16 bg-slate-50 dark:bg-slate-800"
+  id="contact"
+>
+  <div class="container relative">
+    <div class="grid grid-cols-1 pb-6 text-center">
+      <h3 class="font-semibold text-2xl leading-normal mb-4">Contato</h3>
 
-            <p class="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
-        </div><!--end grid-->
+      <p class="text-slate-400 max-w-xl mx-auto">
+        Estamos aqui para ajudar! Precisa de mais informações, tem dúvidas ou
+        quer saber mais sobre nossos serviços? Fale diretamente conosco pelo WhatsApp.
+      </p>
+    </div>
+    <!--end grid-->
 
-        <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
-            <div class="lg:col-span-7 md:col-span-6">
-                <img src="assets/images/contact.svg" alt="">
-            </div>
+    <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
+      <div class="lg:col-span-7 md:col-span-6">
+        <img src="assets/images/contact.png" alt="" />
+      </div>
 
-            <div class="lg:col-span-5 md:col-span-6">
-                <div class="lg:ms-5">
-                    <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
-                        <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
+      <div class="lg:col-span-5 md:col-span-6">
+        <div class="lg:ms-5">
+          <div
+            class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6"
+          >
+            <!-- <div class="chat-container bg-gray-100 p-4 rounded shadow-md">
+              <div class="chat-header bg-blue-500 text-white p-2 rounded-t">
+                <h3 class="text-lg font-semibold">Preparação Policial</h3>
+              </div>
+              <div
+                class="chat-messages overflow-y-auto h-64 p-2 bg-white border rounded"
+              >
+                <div
+                  *ngFor="let message of messages"
+                  [class]="message.isUser ? 'user-message' : 'bot-message'"
+                >
+                  <div
+                    class="message p-2 my-1 rounded"
+                    [ngClass]="{
+                      'bg-blue-100': message.isUser,
+                      'bg-gray-200': !message.isUser
+                    }"
+                  >
+                    {{ message.text }}
+                  </div>
+                </div>
+              </div>
+              <div class="chat-input mt-2">
+                <input
+                  type="text"
+                  class="border p-2 w-full rounded"
+                  placeholder="Digite sua mensagem..."
+                  [(ngModel)]="newMessage"
+                  (keyup.enter)="sendMessage()"
+                />
+                <button
+                  class="bg-blue-500 text-white py-2 px-4 mt-2 rounded w-full"
+                  (click)="sendMessage()"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div> -->
+            <h3 class="text-xl font-semibold mb-4">
+              Fale Conosco pelo WhatsApp
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Precisa de ajuda? Clique no botão abaixo para iniciar uma conversa
+              no WhatsApp com nossa equipe.
+            </p>
+            <a
+              href="https://wa.me/5521972796241"
+              target="_blank"
+              class="inline-block bg-sky-500 text-white font-medium py-2 px-4 rounded hover:bg-green-600"
+            >
+              Falar pelo WhatsApp
+            </a>
+            <!-- <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
                             <p class="mb-0" id="error-msg"></p>
                             <div id="simple-msg"></div>
                             <div class="grid lg:grid-cols-12 grid-cols-1 gap-3">
@@ -39,10 +100,11 @@
                                 </div>
                             </div>
                             <button type="submit" id="submit" name="send" class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white mt-2">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                        </form> -->
+          </div>
         </div>
-    </div><!--end container-->
+      </div>
+    </div>
+  </div>
+  <!--end container-->
 </section>

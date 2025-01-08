@@ -23,42 +23,42 @@ export class ServicesComponent implements
     {
       icon:'check-square',
       title:'Questões',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Estude com as melhores questões inéditas e extraídas de provas anteriores, selecionadas estrategicamente para garantir que você domine os conteúdos exigidos.'
     },
     {
       icon:'edit',
       title:'Prova personalizada',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Crie suas próprias provas, adaptadas ao seu ritmo e às suas necessidades. Foque no que realmente importa para você e otimize seus estudos de forma prática e eficaz de forma estratégica.'
     },
     {
       icon:'file-text',
       title:'Simulados',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Prepare-se como se estivesse no dia do exame! Nossos simulados são desenvolvidos para simular a experiência real da prova, ajudando você a ganhar confiança e identificar pontos de melhoria.'
     },
     {
       icon:'book-open',
       title:'Noticias Policiais',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Fique por dentro dos concursos que estão pra serem publicados. Informações atualizadas e relevantes que podem fazer a diferença na sua preparação. Aqui você fica bem informado.'
     },
     {
       icon:'crosshair',
       title:'Conteúdo de Elite',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Aprenda com conteúdos objetivos, desenvolvidos estrategicamente, com resumos, esquemas e técnicas que facilitam a fixação dos temas mais complexos.'
     },
     {
       icon:'message-square',
       title:'Se Liga',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Mantenha-se inspirado e focado com técnicas de estudo inteligentes e mensagens motivacionais. Nossa missão é fazer você acreditar no seu potencial!'
     },
     {
       icon:'trending-up',
       title:'Desempenho',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Descubra onde você está indo bem e onde precisa melhorar. Relatórios detalhados ajudam você a construir uma estratégia de estudo vencedora.'
     },
     {
       icon:'phone-call',
       title:'Suporte',
-      desc:'If the distribution of letters and words is random, the reader will not be distracted from making.'
+      desc:'Aqui você pode contar com uma equipe em resolver problemas relacionados à plataforma. Estamos aqui para garantir que você tenha uma excelente experiência!'
     },
   ]
 

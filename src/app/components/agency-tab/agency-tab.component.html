@@ -1,77 +1,139 @@
 <section class="realtive md:py-24 py-16" id="services">
-    <div class="container relative">
-        <div class="grid grid-cols-1 pb-6 text-center">
-            <h3 class="font-semibold text-2xl leading-normal mb-4">A Performance-driven Marketing Agency</h3>
+  <div class="container relative">
+    <div class="grid grid-cols-1 pb-6 text-center">
+      <h3 class="font-semibold text-2xl leading-normal mb-4">
+        Estude com estratégia e eficiência
+      </h3>
 
-            <p class="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
-        </div><!--end grid-->
+      <p class="text-slate-400 max-w-xl mx-auto">
+        Resolução de questões é eficaz para transformar seu estudo e essencial
+        para alcançar a aprovação em qualquer concurso.
+      </p>
+    </div>
+    <!--end grid-->
 
-        <div class="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
-            <div class="lg:col-span-4 md:col-span-5">
-                <div class="sticky top-20">
-                    <ul class="flex-column p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                        <li role="presentation">
-                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800" [ngClass]="activeIndex === 1 ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500' : '' " (click)="tabClick(1)">
-                                <span class="block">Step 1</span>
-                                <span class="text-lg mt-2 block">SEO Audit</span>
-                                <span class="block mt-2">We offer flexible and comprehensive online marketing plans</span>
-                            </button>
-                        </li>
-                        <li role="presentation">
-                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800" [ngClass]="activeIndex === 2 ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500' : '' " (click)="tabClick(2)">
-                                <span class="block">Step 2</span>
-                                <span class="text-lg mt-2 block">Project Execution</span>
-                                <span class="block mt-2">We offer flexible and comprehensive online marketing plans</span>
-                            </button>
-                        </li>
-                        <li role="presentation">
-                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800" [ngClass]="activeIndex === 3 ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500' : '' " (click)="tabClick(3)">
-                                <span class="block">Step 3</span>
-                                <span class="text-lg mt-2 block">Results & Reporting</span>
-                                <span class="block mt-2">We offer flexible and comprehensive online marketing plans</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+    <div class="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
+      <div class="lg:col-span-4 md:col-span-5">
+        <div class="sticky top-20">
+          <ul
+            class="flex-column p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md"
+          >
+            <li role="presentation">
+              <button
+                class="px-4 py-2 text-start text-base font-medium rounded-md w-full duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                [ngClass]="
+                  activeIndex === 1
+                    ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500'
+                    : ''
+                "
+                (click)="tabClick(1)"
+              >
+                <!-- <span class="block">Step 1</span> -->
+                <span class="text-lg mt-2 block">Resolva Questões</span>
+                <span class="block mt-2"
+                  >Pratique com nossas questões de provas anteriores e inéditas.</span
+                >
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                [ngClass]="
+                  activeIndex === 2
+                    ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500'
+                    : ''
+                "
+                (click)="tabClick(2)"
+              >
+                <!-- <span class="block">Step 2</span> -->
+                <span class="text-lg mt-2 block">Personalize Sua Prova</span>
+                <span class="block mt-2"
+                  >Escolha dentre as disciplinas estudas e crie sua prova.</span
+                >
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500 hover:text-sky-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                [ngClass]="
+                  activeIndex === 3
+                    ? 'text-white bg-sky-500 hover:text-white dark:hover:text-white hover:bg-sky-500 dark:hover:bg-sky-500'
+                    : ''
+                "
+                (click)="tabClick(3)"
+              >
+                <!-- <span class="block">Step 3</span> -->
+                <span class="text-lg mt-2 block">Analise Seu Desempenho</span>
+                <span class="block mt-2"
+                  >No desempenho você visualiza percentual de acerto e os erros cometidos por disciplina.</span
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 md:col-span-7">
+        <div
+          id="myTabContent"
+          class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md"
+        >
+          <div [ngClass]="activeIndex === 1 ? '' : 'hidden'">
+            <img
+              src="assets/images/questoes.png"
+              class="shadow dark:shadow-gray-700 rounded-md"
+              alt=""
+            />
+
+            <div class="mt-6">
+              <h5 class="text-lg font-medium">Resolva Questões</h5>
+              <p class="text-slate-400 mt-4">
+                Ao responder questões, você revisa e aplica os conteúdos estudados, consolidando o aprendizado de forma prática e eficaz.
+              </p>
             </div>
+          </div>
+          <div [ngClass]="activeIndex === 2 ? '' : 'hidden'">
+            <img
+              src="assets/images/prova.png"
+              class="shadow dark:shadow-gray-700 rounded-md"
+              alt=""
+            />
 
-            <div class="lg:col-span-8 md:col-span-7">
-                <div id="myTabContent" class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                    <div [ngClass]="activeIndex === 1 ? '' : 'hidden'">
-                        <img src="assets/images/blog/01.jpg" class="shadow dark:shadow-gray-700 rounded-md" alt="">
-
-                        <div class="mt-6">
-                            <h5 class="text-lg font-medium">SEO Audit</h5>
-                            <p class="text-slate-400 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, impedit vitae. Nobis, similique omnis cumque sapiente laboriosam animi quod cupiditate?</p>
-                            <div class="mt-4">
-                                <a href="" class="text-sky-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div [ngClass]="activeIndex === 2 ? '' : 'hidden'">
-                        <img src="assets/images/blog/02.jpg" class="shadow dark:shadow-gray-700 rounded-md" alt="">
-
-                        <div class="mt-6">
-                            <h5 class="text-lg font-medium">Project Execution</h5>
-                            <p class="text-slate-400 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, impedit vitae. Nobis, similique omnis cumque sapiente laboriosam animi quod cupiditate?</p>
-                            <div class="mt-4">
-                                <a href="" class="text-sky-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div [ngClass]="activeIndex === 3 ? '' : 'hidden'">
-                        <img src="assets/images/blog/03.jpg" class="shadow dark:shadow-gray-700 rounded-md" alt="">
-
-                        <div class="mt-6">
-                            <h5 class="text-lg font-medium">Results & Reporting</h5>
-                            <p class="text-slate-400 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, impedit vitae. Nobis, similique omnis cumque sapiente laboriosam animi quod cupiditate?</p>
-                            <div class="mt-4">
-                                <a href="" class="text-sky-500">Read More <i class="mdi mdi-chevron-right align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-6">
+              <h5 class="text-lg font-medium">Personalize Sua Prova</h5>
+              <p class="text-slate-400 mt-4">
+                Montar uma prova permite que você escolha os tópicos e disciplinas que mais precisa revisar, maximizando o tempo de estudo e focando em suas necessidades específicas.
+              </p>
+              <!-- <div class="mt-4">
+                <a href="" class="text-sky-500"
+                  >Read More <i class="mdi mdi-chevron-right align-middle"></i
+                ></a>
+              </div> -->
             </div>
-        </div><!--end grid-->
-    </div><!--end container-->
+          </div>
+          <div [ngClass]="activeIndex === 3 ? '' : 'hidden'">
+            <img
+              src="assets/images/desempenho.png"
+              class="shadow dark:shadow-gray-700 rounded-md"
+              alt=""
+            />
+
+            <div class="mt-6">
+              <h5 class="text-lg font-medium">Analise Seu Desempenho</h5>
+              <p class="text-slate-400 mt-4">
+                Com base nos dados de desempenho, é possível ajustar seu cronograma de estudos para priorizar os conteúdos em que tem maior dificuldade.
+              </p>
+              <!-- <div class="mt-4">
+                <a href="" class="text-sky-500"
+                  >Read More <i class="mdi mdi-chevron-right align-middle"></i
+                ></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end grid-->
+  </div>
+  <!--end container-->
 </section>
