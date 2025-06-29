@@ -3,103 +3,101 @@
   id="planos"
 >
   <div class="container relative justify-center items-center">
-    <div class="grid grid-cols-1 pb-6 text-center">
-      <h3 class="font-semibold text-2xl leading-normal mb-4">Planos</h3>
-      <p class="text-slate-400 max-w-xl mx-auto">
-        Invista no seu futuro com planos acessíveis e a melhor preparação para
-        sua carreira policial!
-      </p>
+
+    <!-- Seção de Lançamento Gratuito -->
+    <div *ngIf="!showPricing" class="text-center">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-teal-500 to-sky-500 rounded-lg p-8 shadow-lg">
+          <h3 class="font-bold text-3xl text-white mb-4">🎉 Lançamento Especial!</h3>
+          <p class="text-white/90 text-lg mb-6">
+            Acesso GRATUITO e COMPLETO à plataforma durante o período de lançamento!
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white/10 rounded-lg p-4">
+              <h4 class="text-white font-semibold text-xl mb-3">✨ Tudo Incluído:</h4>
+              <ul class="text-white/90 text-left space-y-2">
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Banco completo de questões
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Provas personalizadas ilimitadas
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Simulados completos
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Técnicas de estudo exclusivas
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white/10 rounded-lg p-4">
+              <h4 class="text-white font-semibold text-xl mb-3">🎯 Premium Gratuito:</h4>
+              <ul class="text-white/90 text-left space-y-2">
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Conteúdo de Elite com resumos
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Notícias Policiais atualizadas
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Relatórios de desempenho
+                </li>
+                <li class="flex items-center">
+                  <i class="mdi mdi-check-circle text-green-300 mr-2"></i>
+                  Suporte especializado
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="https://app.preparacaopolicial.com.br"
+              target="_blank"
+              class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white text-sky-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+            >
+              🚀 Começar Agora - GRÁTIS!
+            </a>
+            <p class="text-white/80 text-sm mt-4">
+              * Período limitado de lançamento - Aproveite!
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--end grid-->
-    <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mt-6 gap-6">
-      <div
-        class="group p-6 relative overflow-hidden shadow dark:shadow-gray-700 bg-white dark:bg-slate-900 rounded-md h-fit"
-      >
-        <h6 class="font-semibold mb-5 text-xl">Iniciante</h6>
 
-        <div class="flex mb-5">
-          <span class="text-lg font-medium">R$</span>
-          <span class="price text-5xl h6 font-semibold mb-0">11,90</span>
-          <span class="text-lg font-medium self-end mb-1">/mês</span>
-        </div>
-
-        <ul class="list-none text-slate-400">
-          <li class="mb-1 flex">
-            <!-- <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Questões</span> -->
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Questões</span>
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Provas personalizadas</span>
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Simulados</span>
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Se Liga com técnicas de estudo</span>
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Conteúdo de Elite com resumos objetivos</span>
-          </li>
-          <li class="mb-1 flex">
-            <i
-              class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-            ></i>
-            <span>Notícias Policiais</span>
-          </li>
-        </ul>
-        <a
-        href="https:\\app.preparacaopolicial.com.br"
-        target="_blank"
-          class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500/5 hover:bg-sky-500 text-sky-500 hover:text-white w-full mt-5"
-          >Comece grátis</a
-        >
+    <!-- Seção de Planos (oculta durante lançamento) -->
+    <div *ngIf="showPricing">
+      <div class="grid grid-cols-1 pb-6 text-center">
+        <h3 class="font-semibold text-2xl leading-normal mb-4">Planos</h3>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          Invista no seu futuro com planos acessíveis e a melhor preparação para
+          sua carreira policial!
+        </p>
       </div>
-      <!--end content-->
-
-      <div
-        class="group relative overflow-hidden shadow dark:shadow-gray-700 bg-white dark:bg-slate-900 rounded-md h-fit"
-      >
+      <!--end grid-->
+      <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mt-6 gap-6">
         <div
-          class="bg-gradient-to-tr from-teal-500 to-teal-700 text-white py-2 px-6 h6 text-lg font-medium"
+          class="group p-6 relative overflow-hidden shadow dark:shadow-gray-700 bg-white dark:bg-slate-900 rounded-md h-fit"
         >
-          Mais escolhido
-        </div>
-        <div class="p-6">
-          <h6 class="font-semibold mb-5 text-xl">Estudante</h6>
+          <h6 class="font-semibold mb-5 text-xl">Iniciante</h6>
 
           <div class="flex mb-5">
             <span class="text-lg font-medium">R$</span>
-            <span class="price text-5xl h6 font-semibold mb-0">29,90</span>
-            <span class="text-lg font-medium self-end mb-1">/trimestral</span>
+            <span class="price text-5xl h6 font-semibold mb-0">11,90</span>
+            <span class="text-lg font-medium self-end mb-1">/mês</span>
           </div>
 
           <ul class="list-none text-slate-400">
-            <li class="mb-1 flex">
-              <!-- <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Questões</span> -->
-            </li>
             <li class="mb-1 flex">
               <i
                 class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
@@ -138,83 +136,139 @@
             </li>
           </ul>
           <a
-          href="https:\\app.preparacaopolicial.com.br"
+          href="https://app.preparacaopolicial.com.br"
           target="_blank"
-            class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white w-full mt-5"
-            >Comece grátis</a
-          >
-        </div>
-      </div>
-      <!--end content-->
-
-      <div
-        class="group p-[1px] relative overflow-hidden shadow dark:shadow-gray-700 rounded-md bg-gradient-to-tr from-teal-500 to-teal-700 h-fit"
-      >
-        <div class="p-6 bg-white dark:bg-slate-900 rounded-md">
-          <h6 class="font-semibold mb-5 text-xl">Concurseiro</h6>
-          <div class="flex mb-5">
-            <span class="text-lg font-medium">R$</span>
-            <span class="price text-5xl h6 font-semibold mb-0">49,90</span>
-            <span class="text-lg font-medium self-end mb-1">/semestral</span>
-          </div>
-         <!--  <p class="text-slate-400 mb-5">
-            Pricing plan will be as per client or company requirements
-          </p> -->
-
-          <ul class="list-none text-slate-400">
-            <li class="mb-1 flex">
-              <!-- <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Questões</span> -->
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Questões</span>
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Provas personalizadas</span>
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Simulados</span>
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Se Liga com técnicas de estudo</span>
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Conteúdo de Elite com resumos objetivos</span>
-            </li>
-            <li class="mb-1 flex">
-              <i
-                class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
-              ></i>
-              <span>Notícias Policiais</span>
-            </li>
-          </ul>
-          <a
-            href="https:\\app.preparacaopolicial.com.br"
-            target="_blank"
             class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500/5 hover:bg-sky-500 text-sky-500 hover:text-white w-full mt-5"
             >Comece grátis</a
           >
         </div>
+        <!--end content-->
+
+        <div
+          class="group relative overflow-hidden shadow dark:shadow-gray-700 bg-white dark:bg-slate-900 rounded-md h-fit"
+        >
+          <div
+            class="bg-gradient-to-tr from-teal-500 to-teal-700 text-white py-2 px-6 h6 text-lg font-medium"
+          >
+            Mais escolhido
+          </div>
+          <div class="p-6">
+            <h6 class="font-semibold mb-5 text-xl">Estudante</h6>
+
+            <div class="flex mb-5">
+              <span class="text-lg font-medium">R$</span>
+              <span class="price text-5xl h6 font-semibold mb-0">29,90</span>
+              <span class="text-lg font-medium self-end mb-1">/trimestral</span>
+            </div>
+
+            <ul class="list-none text-slate-400">
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Questões</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Provas personalizadas</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Simulados</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Se Liga com técnicas de estudo</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Conteúdo de Elite com resumos objetivos</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Notícias Policiais</span>
+              </li>
+            </ul>
+            <a
+            href="https://app.preparacaopolicial.com.br"
+            target="_blank"
+              class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500 text-white w-full mt-5"
+              >Comece grátis</a
+            >
+          </div>
+        </div>
+        <!--end content-->
+
+        <div
+          class="group p-[1px] relative overflow-hidden shadow dark:shadow-gray-700 rounded-md bg-gradient-to-tr from-teal-500 to-teal-700 h-fit"
+        >
+          <div class="p-6 bg-white dark:bg-slate-900 rounded-md">
+            <h6 class="font-semibold mb-5 text-xl">Concurseiro</h6>
+            <div class="flex mb-5">
+              <span class="text-lg font-medium">R$</span>
+              <span class="price text-5xl h6 font-semibold mb-0">49,90</span>
+              <span class="text-lg font-medium self-end mb-1">/semestral</span>
+            </div>
+
+            <ul class="list-none text-slate-400">
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Questões</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Provas personalizadas</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Simulados</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Se Liga com técnicas de estudo</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Conteúdo de Elite com resumos objetivos</span>
+              </li>
+              <li class="mb-1 flex">
+                <i
+                  class="mdi mdi-check-circle-outline text-sky-500 text-[20px] align-middle me-2"
+                ></i>
+                <span>Notícias Policiais</span>
+              </li>
+            </ul>
+            <a
+              href="https://app.preparacaopolicial.com.br"
+              target="_blank"
+              class="h-10 px-6 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-sky-500/5 hover:bg-sky-500 text-sky-500 hover:text-white w-full mt-5"
+              >Comece grátis</a
+            >
+          </div>
+        </div>
+        <!--end content-->
       </div>
-      <!--end content-->
+      <!--end grid-->
     </div>
-    <!--end grid-->
   </div>
 </section>
